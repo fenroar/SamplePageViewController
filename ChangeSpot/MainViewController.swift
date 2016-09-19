@@ -24,4 +24,8 @@ class MainViewController: BaseViewController {
     override func preferredStatusBarIsWhite() -> Bool {
         return true
     }
+    
+    override func preferredBackButtonStyle() -> BackButtonStyle {
+        return .Yellow
+    }
 }

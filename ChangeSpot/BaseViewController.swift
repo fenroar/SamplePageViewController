@@ -8,12 +8,23 @@
 
 import UIKit
 
+enum BackButtonStyle {
+    case Black
+    case White
+    case Yellow
+    case Blue
+    case Green
+}
+
 class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Hello"
+        
         self.updateNavigationBarHidden()
+        self.updateBackButtonImage()
         self.updateStatusBarColor()
     }
     
@@ -30,6 +41,10 @@ class BaseViewController: UIViewController {
     
     func preferredNavigationBarIsHidden() -> Bool {
         return true
+    }
+    
+    func preferredBackButtonStyle() -> BackButtonStyle {
+        return .Black
     }
     
     private func updateNavigationBarHidden() {
@@ -49,6 +64,33 @@ class BaseViewController: UIViewController {
                     navController.navigationBar.translucent = false
                 }
             }
+            
+        }
+    }
+    
+    private func updateBackButtonImage() {
+        
+        if let navController = self.navigationController {
+            var imagePath = ""
+            switch self.preferredBackButtonStyle() {
+            case .White:
+                imagePath = "back_white"
+            case .Black:
+                imagePath = "back_purple"
+            case .Blue:
+                imagePath = "back_blue"
+            case .Green:
+                imagePath = "back_green"
+            case .Yellow:
+                imagePath = "back_yellow"
+            }
+            
+            let backBtn = UIImage(named: imagePath)?.imageWithRenderingMode(.AlwaysOriginal)
+            
+            navController.navigationBar.backIndicatorImage = backBtn;
+            navController.navigationBar.backIndicatorTransitionMaskImage = backBtn;
+            
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
         }
     }
 

@@ -16,6 +16,8 @@
 		D014C0FF1D908058003CA871 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014C0FE1D908058003CA871 /* SplashViewController.swift */; };
 		D014C1011D908221003CA871 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014C1001D908221003CA871 /* GamesViewController.swift */; };
 		D014C1031D90823E003CA871 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014C1021D90823E003CA871 /* FriendsViewController.swift */; };
+		D014C1051D908C04003CA871 /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014C1041D908C04003CA871 /* GameListViewController.swift */; };
+		D014C1071D908CC8003CA871 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014C1061D908CC8003CA871 /* FriendListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		D014C0FE1D908058003CA871 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D014C1001D908221003CA871 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		D014C1021D90823E003CA871 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		D014C1041D908C04003CA871 /* GameListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
+		D014C1061D908CC8003CA871 /* FriendListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +71,9 @@
 				D014C0FE1D908058003CA871 /* SplashViewController.swift */,
 				D014C0FC1D907E00003CA871 /* MainViewController.swift */,
 				D014C1001D908221003CA871 /* GamesViewController.swift */,
+				D014C1041D908C04003CA871 /* GameListViewController.swift */,
 				D014C1021D90823E003CA871 /* FriendsViewController.swift */,
+				D014C1061D908CC8003CA871 /* FriendListViewController.swift */,
 				D014C0EE1D907D16003CA871 /* Main.storyboard */,
 				D014C0F11D907D16003CA871 /* Assets.xcassets */,
 				D014C0F31D907D16003CA871 /* LaunchScreen.storyboard */,
@@ -152,7 +158,9 @@
 				D014C0ED1D907D16003CA871 /* BaseViewController.swift in Sources */,
 				D014C0EB1D907D16003CA871 /* AppDelegate.swift in Sources */,
 				D014C0FF1D908058003CA871 /* SplashViewController.swift in Sources */,
+				D014C1071D908CC8003CA871 /* FriendListViewController.swift in Sources */,
 				D014C1031D90823E003CA871 /* FriendsViewController.swift in Sources */,
+				D014C1051D908C04003CA871 /* GameListViewController.swift in Sources */,
 				D014C1011D908221003CA871 /* GamesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
