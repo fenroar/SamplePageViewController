@@ -10,9 +10,17 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        self.updateNavigationBarHidden()
+        self.updateStatusBarColor()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.updateNavigationBarHidden()
         self.updateStatusBarColor()
     }
     
@@ -20,8 +28,28 @@ class BaseViewController: UIViewController {
         return false
     }
     
-    func preferredStatusBarIsHidden() -> Bool {
-        return false
+    func preferredNavigationBarIsHidden() -> Bool {
+        return true
+    }
+    
+    private func updateNavigationBarHidden() {
+        
+        if let navController = self.navigationController {
+            let currentNavBarIsHidden = navController.navigationBarHidden
+            let expectedNavBarIsHidden = self.preferredNavigationBarIsHidden()
+            
+            if currentNavBarIsHidden != expectedNavBarIsHidden {
+                if expectedNavBarIsHidden {
+                    navController.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+                    navController.navigationBar.shadowImage = UIImage()
+                    navController.navigationBar.translucent = true
+                } else {
+                    navController.navigationBar.setBackgroundImage(nil, forBarMetrics: .Default)
+                    navController.navigationBar.shadowImage = nil
+                    navController.navigationBar.translucent = false
+                }
+            }
+        }
     }
 
     private func updateStatusBarColor() {

@@ -14,7 +14,11 @@ class MainViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.blackColor()
+        self.view.backgroundColor = UIColor.blueColor()
+    }
+    
+    override func preferredNavigationBarIsHidden() -> Bool {
+        return true
     }
     
     override func preferredStatusBarIsWhite() -> Bool {
